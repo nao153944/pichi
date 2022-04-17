@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+    
+    
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>pichiβ版</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"> 
+</head>
+
+
+    
+<body>
+    
+    <div class="snslink">
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-twitter"></i>
+           <a href="https://twitter.com/Kanau_Yumekawa" target="_blank"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-youtube"></i>
+           <a href="https://www.youtube.com/channel/UC8jskpQfW9fn2NLK3PdaGdg/featured" target="_blank"><i class="fab fa-youtube fa-stack-1x"></i></a>
+        </span>    
+            
+        <span class="fa-stack fa-2x fa-lg">
+           <i class="fa fa-circle fa-stack-2x circle-trash"></i>
+           <i class="far fa-trash-alt fa-stack-1x fa-inverse" onclick="ConfirmAlert()"></i>
+        </span> 
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrolltop()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-up fa-stack-1x fa-inverse"></i>
+        </span>
+        
+        <span class="fa-stack fa-2x fa-lg" onclick="scrollunder()">
+           <i class="fa fa-circle fa-stack-2x circle-up"></i>
+           <i class="fas fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+        </span>
+        
+    </div>
+    
+    
+    <div class ="favorite">
+       <input type="checkbox" class="favorite-checkbox" id="favorite" onclick="FavoriteCheck()" >
+       <label class="c-text-favorite" for="favorite-checkbox">お気に入り</label>
+    </div>
+    
+    
+    <div class="form">
+      <input type="search" class="select4" id="select4" placeholder="曲名を入力" onchange="SelectCheck()">
+    </div>
+    
+    
+    <div class ="select">
+       <label class="c-text-select">歌手名</label>
+       <select id="select3" class="select3" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="164">164</option>
+                  <option value="40mP">40mP</option>
+                  <option value="aiko">aiko</option>
+                  <option value="Aimer">Aimer</option>
+                  <option value="back number">back number</option>
+                  <option value="CHiCO with HoneyWorks">CHiCO with HoneyWorks</option>
+                  <option value="DAOKO×米津玄師">DAOKO×米津玄師</option>
+                  <option value="DECO*27">DECO*27</option>
+                  <option value="Dixie Flatline">Dixie Flatline</option>
+                  <option value="doriko">doriko</option>
+                  <option value="EasyPop">EasyPop</option>
+                  <option value="Eight">Eight</option>
+                  <option value="Eve">Eve</option>
+                  <option value="Heavenz">Heavenz</option>
+                  <option value="HoneyWorks">HoneyWorks</option>
+                  <option value="HoneyWorks meets TrySail">HoneyWorks meets TrySail</option>
+                  <option value="Junky">Junky</option>
+                  <option value="KEI">KEI</option>
+                  <option value="koyori(電ポルP)">koyori(電ポルP)</option>
+                  <option value="mothy(悪ノP)">mothy(悪ノP)</option>
+                  <option value="n-buna">n-buna</option>
+                  <option value="supercell">supercell</option>
+                  <option value="TOKOTOKO（西沢さんP）">TOKOTOKO（西沢さんP）</option>
+                  <option value="UNISON SQUARE GARDEN">UNISON SQUARE GARDEN</option>
+                  <option value="YM">YM</option>
+                  <option value="かいりきベア">かいりきベア</option>
+                  <option value="コレサワ">コレサワ</option>
+                  <option value="じん">じん</option>
+                  <option value="スキマスイッチ">スキマスイッチ</option>
+                  <option value="ずっと真夜中でいいのに。">ずっと真夜中でいいのに。</option>
+                  <option value="ナナヲアカリ">ナナヲアカリ</option>
+                  <option value="ナユタン星人">ナユタン星人</option>
+                  <option value="におP">におP</option>
+                  <option value="ぬゆり">ぬゆり</option>
+                  <option value="のりぴー">のりぴー</option>
+                  <option value="バルーン">バルーン</option>
+                  <option value="ピノキオピー">ピノキオピー</option>
+                  <option value="まふまふ">まふまふ</option>
+                  <option value="みきとP">みきとP</option>
+                  <option value="ヨルシカ">ヨルシカ</option>
+                  <option value="ランカ・リー＝中島愛">ランカ・リー＝中島愛</option>
+                  <option value="レム(水瀬いのり)">レム(水瀬いのり)</option>
+                  <option value="れるりり">れるりり</option>
+                  <option value="奥華子">奥華子</option>
+                  <option value="想太">想太</option>
+                  <option value="中川翔子">中川翔子</option>
+                  <option value="中島みゆき">中島みゆき</option>
+                  <option value="蝶々P">蝶々P</option>
+                  <option value="椎名林檎">椎名林檎</option>
+                  <option value="天月 -あまつき-">天月 -あまつき-</option>
+                  <option value="木村弓">木村弓</option>
+                  <option value="涼宮ハルヒ(平野綾)">涼宮ハルヒ(平野綾)</option>
+                  <option value="和田たけあき(くらげP)">和田たけあき(くらげP)</option>
+                <optgroup label=""></optgroup>
+       </select>
+  
+
+       <label class="c-text-select">配信日</label>
+       <select id="select1" class="select1" onchange="SelectCheck()">
+          <option value="none">選択なし</option>
+                  <option value="2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】">2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</option>
+                  <option value="2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】">2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</option>
+                  <option value="2019/07">2019/07</option>
+                  <option value="2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】">2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</option>
+                  <option value="2019/06">2019/06</option>
+                  <option value="2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】">2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</option>
+                  <option value="2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】">2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</option>
+                  <option value="2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】">2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</option>
+                  <option value="2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】">2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</option>
+                  <option value="2019/05">2019/05</option>
+                  <option value="2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】">2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</option>
+                  <option value="2019/04">2019/04</option>
+                  <option value="2019/01/18「クノイチでも恋がしたい」を歌ってみた【かなてぃあ】">2019/01/18「クノイチでも恋がしたい」を歌ってみた【かなてぃあ】</option>
+                  <option value="2019/01">2019/01</option>
+                  <option value="2019">2019</option>
+                  <option value="2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】">2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</option>
+                  <option value="2018/12/23 かいしんのいちげき！/夢川かなう【歌ってみた】">2018/12/23 かいしんのいちげき！/夢川かなう【歌ってみた】</option>
+                  <option value="2018/12">2018/12</option>
+                  <option value="2018/11/10【夢川かなう】フラジール／ぬゆり【歌ってみたのじゃ】">2018/11/10【夢川かなう】フラジール／ぬゆり【歌ってみたのじゃ】</option>
+                  <option value="2018/11">2018/11</option>
+                  <option value="2018/10/27【2000人記念】初の歌配信とファンネーム決め！">2018/10/27【2000人記念】初の歌配信とファンネーム決め！</option>
+                  <option value="2018/10/16 センパイ。/HoneyWorks meets TrySail【夢川かなう】">2018/10/16 センパイ。/HoneyWorks meets TrySail【夢川かなう】</option>
+                  <option value="2018/10">2018/10</option>
+                  <option value="2018/09/29【夢川かなう】メーベル【歌ってみたのじゃ】">2018/09/29【夢川かなう】メーベル【歌ってみたのじゃ】</option>
+                  <option value="2018/09/15【夢川かなう】神のまにまに【歌ってみたのじゃ】">2018/09/15【夢川かなう】神のまにまに【歌ってみたのじゃ】</option>
+                  <option value="2018/09">2018/09</option>
+                  <option value="2018">2018</option>
+                <optgroup label=""></optgroup>
+       </select>
+    </div>
+
+    <div class ="radio">
+       <input class="r-button" type="radio" name="q1" value="デフォルト" onclick="RadioCheck()" checked>
+          <label class="r-text">デフォルト</label>
+       <input class="r-button" type="radio" name="q1" value="配信順" onclick="RadioCheck()">
+          <label class="r-text">配信順</label>
+    </div>
+
+
+<div class ="content" id="content">
+
+              <div id="c-1-1">
+           <input type="checkbox" class="checkbox" id="1-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=pVs0kGpquNY')">
+              <c-text-title id="al-c-1-1" class="れるりり">神のまにまに</c-text-title><br>
+              <c-text-youtube>2018/09/15【夢川かなう】神のまにまに【歌ってみたのじゃ】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-1">
+           <input type="checkbox" class="checkbox" id="2-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=DSq3cCkUWG4')">
+              <c-text-title id="al-c-2-1" class="バルーン">メーベル</c-text-title><br>
+              <c-text-youtube>2018/09/29【夢川かなう】メーベル【歌ってみたのじゃ】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-2">
+           <input type="checkbox" class="checkbox" id="2-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=1392s')">
+              <c-text-title id="al-c-2-2" class="バルーン">メーベル</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-3">
+           <input type="checkbox" class="checkbox" id="2-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=3929s')">
+              <c-text-title id="al-c-2-3" class="バルーン">メーベル</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-4">
+           <input type="checkbox" class="checkbox" id="2-4" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=1815s')">
+              <c-text-title id="al-c-2-4" class="バルーン">メーベル</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-2-5">
+           <input type="checkbox" class="checkbox" id="2-5" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=1401s')">
+              <c-text-title id="al-c-2-5" class="バルーン">メーベル</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-3-1">
+           <input type="checkbox" class="checkbox" id="3-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=itTXj6bGpKQ')">
+              <c-text-title id="al-c-3-1" class="HoneyWorks meets TrySail">センパイ。</c-text-title><br>
+              <c-text-youtube>2018/10/16 センパイ。/HoneyWorks meets TrySail【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-3-2">
+           <input type="checkbox" class="checkbox" id="3-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=2933s')">
+              <c-text-title id="al-c-3-2" class="HoneyWorks meets TrySail">センパイ。</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-4-1">
+           <input type="checkbox" class="checkbox" id="4-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=1339s')">
+              <c-text-title id="al-c-4-1" class="和田たけあき(くらげP)">チュルリラ・チュルリラ・ダッダッダ！</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-5-1">
+           <input type="checkbox" class="checkbox" id="5-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=1564s')">
+              <c-text-title id="al-c-5-1" class="HoneyWorks">今好きになる。</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-6-1">
+           <input type="checkbox" class="checkbox" id="6-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=1969s')">
+              <c-text-title id="al-c-6-1" class="n-buna">メリュー</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-6-2">
+           <input type="checkbox" class="checkbox" id="6-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=992s')">
+              <c-text-title id="al-c-6-2" class="n-buna">メリュー</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-6-3">
+           <input type="checkbox" class="checkbox" id="6-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=3361s')">
+              <c-text-title id="al-c-6-3" class="n-buna">メリュー</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-7-1">
+           <input type="checkbox" class="checkbox" id="7-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=2295s')">
+              <c-text-title id="al-c-7-1" class="DECO*27">妄想感傷代償連盟</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-7-2">
+           <input type="checkbox" class="checkbox" id="7-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=1123s')">
+              <c-text-title id="al-c-7-2" class="DECO*27">妄想感傷代償連盟</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-8-1">
+           <input type="checkbox" class="checkbox" id="8-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=2674s')">
+              <c-text-title id="al-c-8-1" class="164">天ノ弱</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-8-2">
+           <input type="checkbox" class="checkbox" id="8-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=5368s')">
+              <c-text-title id="al-c-8-2" class="164">天ノ弱</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-8-3">
+           <input type="checkbox" class="checkbox" id="8-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=3810s')">
+              <c-text-title id="al-c-8-3" class="164">天ノ弱</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-9-1">
+           <input type="checkbox" class="checkbox" id="9-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=2942s')">
+              <c-text-title id="al-c-9-1" class="じん">チルドレンレコード</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-10-1">
+           <input type="checkbox" class="checkbox" id="10-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=4383s')">
+              <c-text-title id="al-c-10-1" class="DECO*27">妄想税</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-10-2">
+           <input type="checkbox" class="checkbox" id="10-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=4383s')">
+              <c-text-title id="al-c-10-2" class="DECO*27">妄想税</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-11-1">
+           <input type="checkbox" class="checkbox" id="11-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=4651s')">
+              <c-text-title id="al-c-11-1" class="n-buna">夜明けと蛍</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-11-2">
+           <input type="checkbox" class="checkbox" id="11-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=2033s')">
+              <c-text-title id="al-c-11-2" class="n-buna">夜明けと蛍</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-11-3">
+           <input type="checkbox" class="checkbox" id="11-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=1395s')">
+              <c-text-title id="al-c-11-3" class="n-buna">夜明けと蛍</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-11-4">
+           <input type="checkbox" class="checkbox" id="11-4" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=1885s')">
+              <c-text-title id="al-c-11-4" class="n-buna">夜明けと蛍</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-12-1">
+           <input type="checkbox" class="checkbox" id="12-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=mcn6p_9dbxw\x26t=5114s')">
+              <c-text-title id="al-c-12-1" class="40mP">からくりピエロ</c-text-title><br>
+              <c-text-youtube>2018/10/27【2000人記念】初の歌配信とファンネーム決め！</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-12-2">
+           <input type="checkbox" class="checkbox" id="12-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=4410s')">
+              <c-text-title id="al-c-12-2" class="40mP">からくりピエロ</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-12-3">
+           <input type="checkbox" class="checkbox" id="12-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=2287s')">
+              <c-text-title id="al-c-12-3" class="40mP">からくりピエロ</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-13-1">
+           <input type="checkbox" class="checkbox" id="13-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KLpYhA5j4Rs')">
+              <c-text-title id="al-c-13-1" class="ぬゆり">フラジール</c-text-title><br>
+              <c-text-youtube>2018/11/10【夢川かなう】フラジール／ぬゆり【歌ってみたのじゃ】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-13-2">
+           <input type="checkbox" class="checkbox" id="13-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=1362s')">
+              <c-text-title id="al-c-13-2" class="ぬゆり">フラジール</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-14-1">
+           <input type="checkbox" class="checkbox" id="14-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=VcAeQjApT1M')">
+              <c-text-title id="al-c-14-1" class="天月 -あまつき-">かいしんのいちげき！</c-text-title><br>
+              <c-text-youtube>2018/12/23 かいしんのいちげき！/夢川かなう【歌ってみた】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-14-2">
+           <input type="checkbox" class="checkbox" id="14-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=291s')">
+              <c-text-title id="al-c-14-2" class="天月 -あまつき-">かいしんのいちげき！</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-14-3">
+           <input type="checkbox" class="checkbox" id="14-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=2129s')">
+              <c-text-title id="al-c-14-3" class="天月 -あまつき-">かいしんのいちげき！</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-14-4">
+           <input type="checkbox" class="checkbox" id="14-4" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=1491s')">
+              <c-text-title id="al-c-14-4" class="天月 -あまつき-">かいしんのいちげき！</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-15-1">
+           <input type="checkbox" class="checkbox" id="15-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=692s')">
+              <c-text-title id="al-c-15-1" class="DECO*27">おじゃま虫</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-15-2">
+           <input type="checkbox" class="checkbox" id="15-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=604s')">
+              <c-text-title id="al-c-15-2" class="DECO*27">おじゃま虫</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-16-1">
+           <input type="checkbox" class="checkbox" id="16-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=911s')">
+              <c-text-title id="al-c-16-1" class="かいりきベア">ベノム</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-16-2">
+           <input type="checkbox" class="checkbox" id="16-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=4067s')">
+              <c-text-title id="al-c-16-2" class="かいりきベア">ベノム</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-16-3">
+           <input type="checkbox" class="checkbox" id="16-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=3188s')">
+              <c-text-title id="al-c-16-3" class="かいりきベア">ベノム</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-16-4">
+           <input type="checkbox" class="checkbox" id="16-4" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=1107s')">
+              <c-text-title id="al-c-16-4" class="かいりきベア">ベノム</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-17-1">
+           <input type="checkbox" class="checkbox" id="17-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=1790s')">
+              <c-text-title id="al-c-17-1" class="ランカ・リー＝中島愛">星間飛行</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-18-1">
+           <input type="checkbox" class="checkbox" id="18-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=2354s')">
+              <c-text-title id="al-c-18-1" class="HoneyWorks">金曜日のおはよう</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-19-1">
+           <input type="checkbox" class="checkbox" id="19-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=2593s')">
+              <c-text-title id="al-c-19-1" class="ナユタン星人">太陽系デスコ</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-19-2">
+           <input type="checkbox" class="checkbox" id="19-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=1041s')">
+              <c-text-title id="al-c-19-2" class="ナユタン星人">太陽系デスコ</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-20-1">
+           <input type="checkbox" class="checkbox" id="20-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=2800s')">
+              <c-text-title id="al-c-20-1" class="みきとP">少女レイ</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-20-2">
+           <input type="checkbox" class="checkbox" id="20-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=821s')">
+              <c-text-title id="al-c-20-2" class="みきとP">少女レイ</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-21-1">
+           <input type="checkbox" class="checkbox" id="21-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=CVNgL7JQ5bw\x26t=3083s')">
+              <c-text-title id="al-c-21-1" class="back number">瞬き</c-text-title><br>
+              <c-text-youtube>2018/12/29 5000人突記念枠！夢川ライブ！！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-22-1">
+           <input type="checkbox" class="checkbox" id="22-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=2m5U6YC9wtM')">
+              <c-text-title id="al-c-22-1" class="みきとP">クノイチでも恋がしたい</c-text-title><br>
+              <c-text-youtube>2019/01/18「クノイチでも恋がしたい」を歌ってみた【かなてぃあ】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-22-2">
+           <input type="checkbox" class="checkbox" id="22-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=430s')">
+              <c-text-title id="al-c-22-2" class="みきとP">クノイチでも恋がしたい</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-23-1">
+           <input type="checkbox" class="checkbox" id="23-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=971s')">
+              <c-text-title id="al-c-23-1" class="CHiCO with HoneyWorks">アイのシナリオ</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-24-1">
+           <input type="checkbox" class="checkbox" id="24-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=1418s')">
+              <c-text-title id="al-c-24-1" class="バルーン">シャルル</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-24-2">
+           <input type="checkbox" class="checkbox" id="24-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=509s')">
+              <c-text-title id="al-c-24-2" class="バルーン">シャルル</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-25-1">
+           <input type="checkbox" class="checkbox" id="25-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=1791s')">
+              <c-text-title id="al-c-25-1" class="ヨルシカ">ヒッチコック</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-26-1">
+           <input type="checkbox" class="checkbox" id="26-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=2143s')">
+              <c-text-title id="al-c-26-1" class="UNISON SQUARE GARDEN">シュガーソングとビターステップ</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-27-1">
+           <input type="checkbox" class="checkbox" id="27-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=2529s')">
+              <c-text-title id="al-c-27-1" class="Junky">メランコリック</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-28-1">
+           <input type="checkbox" class="checkbox" id="28-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=2868s')">
+              <c-text-title id="al-c-28-1" class="じん">カゲロウデイズ</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-29-1">
+           <input type="checkbox" class="checkbox" id="29-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=3241s')">
+              <c-text-title id="al-c-29-1" class="doriko">ロミオとシンデレラ</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-30-1">
+           <input type="checkbox" class="checkbox" id="30-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=FOCBZyZPRBA\x26t=4929s')">
+              <c-text-title id="al-c-30-1" class="レム(水瀬いのり)">Wishing</c-text-title><br>
+              <c-text-youtube>2019/04/29【Vtuber】GWもお歌を歌っていくう！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-31-1">
+           <input type="checkbox" class="checkbox" id="31-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=616s')">
+              <c-text-title id="al-c-31-1" class="まふまふ">すーぱーぬこになりたい</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-32-1">
+           <input type="checkbox" class="checkbox" id="32-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=1803s')">
+              <c-text-title id="al-c-32-1" class="椎名林檎">丸の内サディスティック</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-33-1">
+           <input type="checkbox" class="checkbox" id="33-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=2384s')">
+              <c-text-title id="al-c-33-1" class="におP">rain stops, good-bye</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-34-1">
+           <input type="checkbox" class="checkbox" id="34-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=2803s')">
+              <c-text-title id="al-c-34-1" class="想太">いかないで</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-35-1">
+           <input type="checkbox" class="checkbox" id="35-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=3177s')">
+              <c-text-title id="al-c-35-1" class="n-buna">ラプンツェル</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-36-1">
+           <input type="checkbox" class="checkbox" id="36-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=3772s')">
+              <c-text-title id="al-c-36-1" class="Heavenz">それがあなたの幸せとしても</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-37-1">
+           <input type="checkbox" class="checkbox" id="37-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=4954s')">
+              <c-text-title id="al-c-37-1" class="蝶々P">心做し</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-38-1">
+           <input type="checkbox" class="checkbox" id="38-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=6020s')">
+              <c-text-title id="al-c-38-1" class="のりぴー">右肩の蝶</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-39-1">
+           <input type="checkbox" class="checkbox" id="39-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=6445s')">
+              <c-text-title id="al-c-39-1" class="中島みゆき">糸</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-40-1">
+           <input type="checkbox" class="checkbox" id="40-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=9aGzH2hKPEE\x26t=6687s')">
+              <c-text-title id="al-c-40-1" class="コレサワ">たばこ</c-text-title><br>
+              <c-text-youtube>2019/05/05【Vtuber】令和最初のの歌配信！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-40-2">
+           <input type="checkbox" class="checkbox" id="40-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=1468s')">
+              <c-text-title id="al-c-40-2" class="コレサワ">たばこ</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-41-1">
+           <input type="checkbox" class="checkbox" id="41-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=1022s')">
+              <c-text-title id="al-c-41-1" class="和田たけあき(くらげP)">ビースト・ダンス</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-41-2">
+           <input type="checkbox" class="checkbox" id="41-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=3078s')">
+              <c-text-title id="al-c-41-2" class="和田たけあき(くらげP)">ビースト・ダンス</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-41-3">
+           <input type="checkbox" class="checkbox" id="41-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=3858s')">
+              <c-text-title id="al-c-41-3" class="和田たけあき(くらげP)">ビースト・ダンス</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-41-4">
+           <input type="checkbox" class="checkbox" id="41-4" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=3210s')">
+              <c-text-title id="al-c-41-4" class="和田たけあき(くらげP)">ビースト・ダンス</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-42-1">
+           <input type="checkbox" class="checkbox" id="42-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=1771s')">
+              <c-text-title id="al-c-42-1" class="ナユタン星人">エイリアンエイリアン</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-43-1">
+           <input type="checkbox" class="checkbox" id="43-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=2515s')">
+              <c-text-title id="al-c-43-1" class="DECO*27">乙女解剖</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-43-2">
+           <input type="checkbox" class="checkbox" id="43-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=1136s')">
+              <c-text-title id="al-c-43-2" class="DECO*27">乙女解剖</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-43-3">
+           <input type="checkbox" class="checkbox" id="43-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=1524s')">
+              <c-text-title id="al-c-43-3" class="DECO*27">乙女解剖</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-44-1">
+           <input type="checkbox" class="checkbox" id="44-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=3284s')">
+              <c-text-title id="al-c-44-1" class="涼宮ハルヒ(平野綾)">God knows...</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-45-1">
+           <input type="checkbox" class="checkbox" id="45-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=4322s')">
+              <c-text-title id="al-c-45-1" class="DAOKO×米津玄師">打上花火</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-46-1">
+           <input type="checkbox" class="checkbox" id="46-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=4821s')">
+              <c-text-title id="al-c-46-1" class="mothy(悪ノP)">悪ノ召使</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-47-1">
+           <input type="checkbox" class="checkbox" id="47-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=5291s')">
+              <c-text-title id="al-c-47-1" class="mothy(悪ノP)">悪ノ娘</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-48-1">
+           <input type="checkbox" class="checkbox" id="48-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=5700s')">
+              <c-text-title id="al-c-48-1" class="ずっと真夜中でいいのに。">秒針を噛む</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-49-1">
+           <input type="checkbox" class="checkbox" id="49-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=KBwWXmwdTEM\x26t=6159s')">
+              <c-text-title id="al-c-49-1" class="Aimer">カタオモイ</c-text-title><br>
+              <c-text-youtube>2019/05/12【Vtuber】一週間の終わりに歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-49-2">
+           <input type="checkbox" class="checkbox" id="49-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=796s')">
+              <c-text-title id="al-c-49-2" class="Aimer">カタオモイ</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-49-3">
+           <input type="checkbox" class="checkbox" id="49-3" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=2770s')">
+              <c-text-title id="al-c-49-3" class="Aimer">カタオモイ</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-50-1">
+           <input type="checkbox" class="checkbox" id="50-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=730s')">
+              <c-text-title id="al-c-50-1" class="supercell">ワールドイズマイン</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-51-1">
+           <input type="checkbox" class="checkbox" id="51-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=2439s')">
+              <c-text-title id="al-c-51-1" class="YM">十面相</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-51-2">
+           <input type="checkbox" class="checkbox" id="51-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=3931s')">
+              <c-text-title id="al-c-51-2" class="YM">十面相</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-52-1">
+           <input type="checkbox" class="checkbox" id="52-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=2738s')">
+              <c-text-title id="al-c-52-1" class="40mP">恋愛裁判</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-52-2">
+           <input type="checkbox" class="checkbox" id="52-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=2795s')">
+              <c-text-title id="al-c-52-2" class="40mP">恋愛裁判</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-53-1">
+           <input type="checkbox" class="checkbox" id="53-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=jfabjBisOks\x26t=3416s')">
+              <c-text-title id="al-c-53-1" class="Eve">お気に召すまま</c-text-title><br>
+              <c-text-youtube>2019/05/19【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-54-1">
+           <input type="checkbox" class="checkbox" id="54-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=597s')">
+              <c-text-title id="al-c-54-1" class="TOKOTOKO（西沢さんP）">夜もすがら君想ふ</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-55-1">
+           <input type="checkbox" class="checkbox" id="55-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=1897s')">
+              <c-text-title id="al-c-55-1" class="ぬゆり">フィクサー</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-56-1">
+           <input type="checkbox" class="checkbox" id="56-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=2335s')">
+              <c-text-title id="al-c-56-1" class="supercell">君の知らない物語</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-57-1">
+           <input type="checkbox" class="checkbox" id="57-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=cRRyVbXNdA0\x26t=3497s')">
+              <c-text-title id="al-c-57-1" class="ぬゆり">命ばっかり</c-text-title><br>
+              <c-text-youtube>2019/05/26【Vtuber】良い子のお歌配信【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-58-1">
+           <input type="checkbox" class="checkbox" id="58-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=646s')">
+              <c-text-title id="al-c-58-1" class="EasyPop">ハッピーシンセサイザ</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-59-1">
+           <input type="checkbox" class="checkbox" id="59-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=1494s')">
+              <c-text-title id="al-c-59-1" class="koyori(電ポルP)">独りんぼエンヴィー</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-59-2">
+           <input type="checkbox" class="checkbox" id="59-2" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=2116s')">
+              <c-text-title id="al-c-59-2" class="koyori(電ポルP)">独りんぼエンヴィー</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-60-1">
+           <input type="checkbox" class="checkbox" id="60-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=2165s')">
+              <c-text-title id="al-c-60-1" class="ナナヲアカリ">ダダダダ天使</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-61-1">
+           <input type="checkbox" class="checkbox" id="61-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=2682s')">
+              <c-text-title id="al-c-61-1" class="DECO*27">ライアーダンス</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-62-1">
+           <input type="checkbox" class="checkbox" id="62-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=2979s')">
+              <c-text-title id="al-c-62-1" class="れるりり">脳漿炸裂ガール</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-63-1">
+           <input type="checkbox" class="checkbox" id="63-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=SNvflJ88Ydo\x26t=3625s')">
+              <c-text-title id="al-c-63-1" class="ピノキオピー">頓珍漢の宴</c-text-title><br>
+              <c-text-youtube>2019/06/09【Vtuber】歌うのじゃ！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-64-1">
+           <input type="checkbox" class="checkbox" id="64-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=552s')">
+              <c-text-title id="al-c-64-1" class="aiko">カブトムシ</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-65-1">
+           <input type="checkbox" class="checkbox" id="65-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=1124s')">
+              <c-text-title id="al-c-65-1" class="スキマスイッチ">奏</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-66-1">
+           <input type="checkbox" class="checkbox" id="66-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=1939s')">
+              <c-text-title id="al-c-66-1" class="木村弓">いのちの名前</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-67-1">
+           <input type="checkbox" class="checkbox" id="67-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=2660s')">
+              <c-text-title id="al-c-67-1" class="Dixie Flatline">Just Be Friends</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-68-1">
+           <input type="checkbox" class="checkbox" id="68-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=3109s')">
+              <c-text-title id="al-c-68-1" class="KEI">ピエロ</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-69-1">
+           <input type="checkbox" class="checkbox" id="69-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=Xe99qJGytq0\x26t=3326s')">
+              <c-text-title id="al-c-69-1" class="奥華子">変わらないもの</c-text-title><br>
+              <c-text-youtube>2019/07/08【Vtuber】お歌寝かしつけ【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-70-1">
+           <input type="checkbox" class="checkbox" id="70-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=1780s')">
+              <c-text-title id="al-c-70-1" class="バルーン">雨とペトラ</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-71-1">
+           <input type="checkbox" class="checkbox" id="71-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=2410s')">
+              <c-text-title id="al-c-71-1" class="Eve">あの娘シークレット</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-72-1">
+           <input type="checkbox" class="checkbox" id="72-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=3688s')">
+              <c-text-title id="al-c-72-1" class="中川翔子">空色デイズ</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-73-1">
+           <input type="checkbox" class="checkbox" id="73-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=4048s')">
+              <c-text-title id="al-c-73-1" class="Eight">とても素敵な六月でした</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+              <div id="c-74-1">
+           <input type="checkbox" class="checkbox" id="74-1" onclick="Save()" >
+           <button class="c-button" type="button" onclick="OpenWindow('https:\/\/www.youtube.com\/watch?v=sV17QyTsyDA\x26t=4687s')">
+              <c-text-title id="al-c-74-1" class="Aimer">蝶々結び</c-text-title><br>
+              <c-text-youtube>2019/07/28【Vtuber】お歌を歌いたい！【夢川かなう】</c-text-youtube>
+           </button>
+        </div>
+
+      
+
+    </div>
+
+   <script type="text/javascript">
+       
+       
+var list = new Array(
+"1-1",
+"2-1",
+"2-2",
+"2-3",
+"2-4",
+"2-5",
+"3-1",
+"3-2",
+"4-1",
+"5-1",
+"6-1",
+"6-2",
+"6-3",
+"7-1",
+"7-2",
+"8-1",
+"8-2",
+"8-3",
+"9-1",
+"10-1",
+"10-2",
+"11-1",
+"11-2",
+"11-3",
+"11-4",
+"12-1",
+"12-2",
+"12-3",
+"13-1",
+"13-2",
+"14-1",
+"14-2",
+"14-3",
+"14-4",
+"15-1",
+"15-2",
+"16-1",
+"16-2",
+"16-3",
+"16-4",
+"17-1",
+"18-1",
+"19-1",
+"19-2",
+"20-1",
+"20-2",
+"21-1",
+"22-1",
+"22-2",
+"23-1",
+"24-1",
+"24-2",
+"25-1",
+"26-1",
+"27-1",
+"28-1",
+"29-1",
+"30-1",
+"31-1",
+"32-1",
+"33-1",
+"34-1",
+"35-1",
+"36-1",
+"37-1",
+"38-1",
+"39-1",
+"40-1",
+"40-2",
+"41-1",
+"41-2",
+"41-3",
+"41-4",
+"42-1",
+"43-1",
+"43-2",
+"43-3",
+"44-1",
+"45-1",
+"46-1",
+"47-1",
+"48-1",
+"49-1",
+"49-2",
+"49-3",
+"50-1",
+"51-1",
+"51-2",
+"52-1",
+"52-2",
+"53-1",
+"54-1",
+"55-1",
+"56-1",
+"57-1",
+"58-1",
+"59-1",
+"59-2",
+"60-1",
+"61-1",
+"62-1",
+"63-1",
+"64-1",
+"65-1",
+"66-1",
+"67-1",
+"68-1",
+"69-1",
+"70-1",
+"71-1",
+"72-1",
+"73-1",
+"74-1",
+);
+
+
+
+
+
+var rh = new Array(
+"1-1",
+"2-1",
+"3-1",
+"4-1",
+"5-1",
+"6-1",
+"7-1",
+"8-1",
+"9-1",
+"10-1",
+"11-1",
+"12-1",
+"13-1",
+"14-1",
+"14-2",
+"15-1",
+"16-1",
+"2-2",
+"7-2",
+"17-1",
+"11-2",
+"18-1",
+"19-1",
+"20-1",
+"21-1",
+"22-1",
+"15-2",
+"23-1",
+"24-1",
+"25-1",
+"26-1",
+"27-1",
+"28-1",
+"29-1",
+"16-2",
+"30-1",
+"31-1",
+"19-2",
+"11-3",
+"32-1",
+"33-1",
+"34-1",
+"35-1",
+"36-1",
+"12-2",
+"37-1",
+"8-2",
+"38-1",
+"39-1",
+"40-1",
+"24-2",
+"41-1",
+"13-2",
+"2-3",
+"42-1",
+"14-3",
+"43-1",
+"3-2",
+"44-1",
+"45-1",
+"46-1",
+"47-1",
+"48-1",
+"49-1",
+"50-1",
+"43-2",
+"14-4",
+"11-4",
+"51-1",
+"52-1",
+"41-2",
+"53-1",
+"54-1",
+"6-2",
+"43-3",
+"55-1",
+"56-1",
+"52-2",
+"16-3",
+"57-1",
+"51-2",
+"58-1",
+"16-4",
+"59-1",
+"2-4",
+"60-1",
+"61-1",
+"62-1",
+"6-3",
+"63-1",
+"41-3",
+"64-1",
+"49-2",
+"65-1",
+"40-2",
+"66-1",
+"12-3",
+"67-1",
+"68-1",
+"69-1",
+"8-3",
+"22-2",
+"20-2",
+"2-5",
+"70-1",
+"59-2",
+"71-1",
+"49-3",
+"41-4",
+"72-1",
+"73-1",
+"10-2",
+"74-1",
+);
+
+
+
+
+       
+       
+      var loadcontent;
+      var loadcheckbox;
+      var loadlist;
+       
+      window.onload = firstscript();
+      
+       
+       
+      function firstscript(){
+         var i=0;
+         while( i<list.length ){
+            loadlist = JSON.parse(localStorage.getItem('psave'+list[i]));
+            if(loadlist == "true"){
+               loadcheckbox = document.getElementById(list[i]);
+               loadcheckbox.checked = true;
+            }
+            i++;
+         }
+      }
+       
+       
+       
+      function Save() {
+          var i = 0;
+          while( i<list.length ){
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  localStorage.setItem('psave'+list[i],JSON.stringify("true"));
+             }
+             else{
+                  localStorage.setItem('psave'+list[i],JSON.stringify("false"));
+             }
+             i++;
+          }
+      }
+      
+      
+      function ConfirmAlert(){
+          var message = "保存データを削除しますか？";
+          if(confirm(message)){
+             Delete();
+          }
+      } 
+       
+      function Delete(){
+          var i = 0;
+          while( i<list.length ){
+             localStorage.removeItem('psave'+list[i]);
+             loadcheckbox = document.getElementById(list[i]);
+             if(loadcheckbox.checked == true){
+                  loadcheckbox.checked = false;
+             }
+             i++;
+          }
+      } 
+       
+       
+      function FavoriteCheck() {
+         loadcheckbox = document.getElementById("favorite");
+         if(loadcheckbox.checked == true){
+            FavoriteOn();
+         }
+         else{
+            FavoriteOff();
+         }
+         SelectCheck();
+      } 
+    
+       
+      function FavoriteOn() {
+          var i = 0;
+          while( i<list.length ){
+             loadlist = JSON.parse(localStorage.getItem('psave'+list[i]));
+             if(loadlist == "true"){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             }
+             else{
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.add("c-active-none");
+             }
+             i++;
+          }
+      }
+       
+      function FavoriteOff() {
+          var i = 0;
+          while( i<list.length ){
+                loadcontent = document.getElementById("c-"+list[i]);
+                loadcontent.classList.remove("c-active-none");
+             i++;
+          }
+      }
+        
+      
+      function SelectCheck() {
+         var select1check = document.getElementById("select1");
+         var select2check = document.getElementById("select4");
+         var select3check = document.getElementById("select3");
+         var i = 0;
+         while( i<list.length ){
+            loadcontent = document.getElementById("c-"+list[i]);
+            loadcontent.classList.remove("c-select-none");
+            loadcontent.classList.remove("c-select2-none");
+            loadcontent.classList.remove("c-select3-none");
+            i++;
+         }  
+         if(select1check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select1check.value) == -1 ){
+                  loadcontent.classList.add("c-select-none");
+               }
+               i++;
+            }
+         }
+         if(select2check.value != "" || select2check.value != null){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.textContent.indexOf(select2check.value) == -1){
+                  loadcontent = document.getElementById("c-"+list[i]);
+                  loadcontent.classList.add("c-select2-none");       
+               }
+               i++
+            }
+         }
+         if(select3check.value != "none"){
+            var i = 0;
+            while( i<list.length ){
+               loadcontent = document.getElementById("al-c-"+list[i]);
+               if(loadcontent.classList != select3check.value){
+                   loadcontent = document.getElementById("c-"+list[i]);
+                   loadcontent.classList.add("c-select3-none");
+               }
+               i++;
+            }
+         }
+      } 
+       
+       
+      
+      function RadioCheck(){
+         var radiocheck = document.getElementsByName('q1'); 
+         var i = 0;
+         while(i<radiocheck.length){
+            if(radiocheck[i].checked == true){
+               radiocheck = radiocheck[i].value;
+            }
+            i++;
+         }
+         var element = document.getElementById("content");
+
+         if(radiocheck == "デフォルト"){
+             var i=0;
+             while(i<list.length){
+                var elementload = document.getElementById("c-"+ list[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+         } 
+         else if(radiocheck == "配信順"){
+             var i=0;
+             while(i<rh.length){
+                var elementload = document.getElementById("c-"+ rh[i]);
+                element.insertBefore(elementload,element.children[element.lastChild]);
+                i++;
+             }
+         }
+      }  
+       
+       
+       
+      function scrolltop(){
+         window.scroll({top: 0, behavior: 'smooth'});
+      };  
+       
+      function scrollunder(){
+         var element = document.documentElement;
+         var bottom = element.scrollHeight - element.clientHeight;
+         window.scrollTo({top: bottom, left: 0, behavior: 'smooth'});
+      };   
+       
+       
+       
+      function OpenWindow(url) {
+         window.open(url,"blank","width=800,height=720,left=900,top=100");
+      } 
+       
+       
+       
+       
+   </script>
+    
+
+
+    
+</body>
+    
+    
+    
+    
+    
+</html>
