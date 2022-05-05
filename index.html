@@ -7094,7 +7094,10 @@ var rh = new Array(
                   localStorage.setItem('psave'+list[i],JSON.stringify("true"));
              }
              else{
-                  localStorage.setItem('psave'+list[i],JSON.stringify("false"));
+                 loadlist = JSON.parse(localStorage.getItem('psave'+list[i]));
+                 if(loadlist == "true"){
+                    localStorage.removeItem('psave'+list[i]);
+                 }
              }
              i++;
           }
