@@ -16,7 +16,7 @@
     
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>pichi1.2</title>
+  <title>pichi1.3</title>
   <link rel="shortcut icon" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
   <link rel="stylesheet" href="style.css">
@@ -13619,6 +13619,20 @@ var rh = new Array(
             }
             i++;
          }
+          
+         loadlist = JSON.parse(localStorage.getItem('psavefavorite'));
+         if(loadlist == "true"){
+            loadcheckbox = document.getElementById('favorite');
+            loadcheckbox.checked = true;
+            FavoriteOn();
+         }
+          
+         loadlist = JSON.parse(localStorage.getItem('psaveradio')); 
+         if(loadlist == "1"){
+            loadcheckbox = document.getElementsByName('q1');
+            loadcheckbox[1].checked = true;
+         } 
+         RadioCheck();
       }
        
        
@@ -13658,13 +13672,15 @@ var rh = new Array(
              }
              i++;
           }
+          localStorage.removeItem('psavefavorite');
+          localStorage.removeItem('psaveradio');
       } 
        
        
       function FavoriteCheck() {
          loadcheckbox = document.getElementById("favorite");
          if(loadcheckbox.checked == true){
-            FavoriteOn();
+            FavoriteOn(); 
          }
          else{
             FavoriteOff();
@@ -13687,6 +13703,7 @@ var rh = new Array(
              }
              i++;
           }
+          localStorage.setItem('psavefavorite',JSON.stringify("true"));
       }
        
       function FavoriteOff() {
@@ -13696,6 +13713,7 @@ var rh = new Array(
                 loadcontent.classList.remove("c-active-none");
              i++;
           }
+          localStorage.removeItem('psavefavorite');
       }
         
       
@@ -13765,6 +13783,8 @@ var rh = new Array(
                 element.insertBefore(elementload,element.children[element.lastChild]);
                 i++;
              }
+             localStorage.removeItem('psaveradio');
+             
          } 
          else if(radiocheck == "配信順"){
              var i=0;
@@ -13773,6 +13793,7 @@ var rh = new Array(
                 element.insertBefore(elementload,element.children[element.lastChild]);
                 i++;
              }
+             localStorage.setItem('psaveradio',JSON.stringify('1'));
          }
       }  
        
